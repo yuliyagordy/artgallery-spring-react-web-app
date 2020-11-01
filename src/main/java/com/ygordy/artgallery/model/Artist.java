@@ -30,7 +30,7 @@ public class Artist implements Serializable {
     private String fullName;
 
     @OneToMany(mappedBy = "artist", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Fetch(value= FetchMode.SELECT)
+    @Fetch(value = FetchMode.SELECT)
     @JsonIgnore
     private Set<Picture> pictures;
 
@@ -39,7 +39,7 @@ public class Artist implements Serializable {
         this.fullName = fullName;
     }
 
-        @Override
+    @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

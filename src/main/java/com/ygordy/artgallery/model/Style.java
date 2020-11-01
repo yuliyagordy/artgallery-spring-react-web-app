@@ -29,4 +29,12 @@ public class Style implements Serializable {
     @ManyToMany(mappedBy = "styles", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Picture> pictures;
+
+    @Override
+    public String toString() {
+        return "Style{"
+                + "id=" + getId()
+                + ", name='" + getName() + "'"
+                + "}";
+    }
 }
